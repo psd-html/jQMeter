@@ -1,5 +1,6 @@
 jQMeter plugin pour PluXml
 =========
+source: https://github.com/glarios/jQMeter
 
 ![Alt text](http://nextum.fr/jqmeter.png)
 
