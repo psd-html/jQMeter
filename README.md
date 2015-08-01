@@ -1,14 +1,15 @@
-jQMeter pour PluXml
+jQMeter plugin pour PluXml
 =========
-Plugin
 
 ![Alt text](http://nextum.fr/jqmeter.png)
 
-Exemple de la page admin
+
+Page d'administration du plugin
+--------------
 
 ![Alt text](http://nextum.fr/jqmeter_admin.png)
 
-Le plugin est visible à cette adresse: http://nextum.fr avec le template Color
+Démo et tutoriel sur http://nextum.fr  avec le template Color
 
 
-N'hésitez pas à me contacter sur http://psdtohtml5.fr
+
