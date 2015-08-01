@@ -6,10 +6,6 @@ class jQMeter extends plxPlugin {
 
     # Appel du constructeur de la classe plxPlugin (obligatoire)
     parent::__construct($default_lang);
-
-
-    # Pour accéder à une page d'administration
-    $this->setAdminProfil(PROFIL_ADMIN,PROFIL_MANAGER);
     
     # Pour accéder à une page de configuration
     $this->setConfigProfil(PROFIL_ADMIN,PROFIL_MANAGER);
@@ -32,10 +28,11 @@ class jQMeter extends plxPlugin {
     public function ThemeEndBody(){ ?>
 
         <script type="text/javascript">
-            /* <![CDATA[ */
-               if(typeof(jQuery) === "undefined") document.write(\'<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>\');
-            /* !]]> */
-            </script>
+        /* <![CDATA[ */
+           if(typeof(jQuery) === "undefined") document.write(\'<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>\');
+        /* !]]> */
+        </script>
+
 
 
         <script src="<?php echo PLX_PLUGINS ?>jQMeter/js/jqmeter.min.js"></script>

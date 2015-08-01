@@ -16,16 +16,18 @@ if(!empty($_POST)) {
 	exit;
 }
 
-
-
 ?>
 
 <h2><?php echo $plxPlugin->getInfo("description") ?></h2>
 
+<p>
+	Pour afficher la barre de progression :
+</p>
 
+<code>&lt;?php eval($plxShow->callHook('jQMeter')); ?&gt;</code>
 
 <style>
-	input, textarea {border-radius: 5px;width: 70%}
+	input, textarea {border-radius: 5px;width: 60%}
 	textarea {min-height: 70px}
 	label{font-style: italic}
 </style>
@@ -38,7 +40,7 @@ if(!empty($_POST)) {
 	</p>	
 
 	<p>
-		<label for="actuel">Actuelle</label>
+		<label for="actuel">Valeur actuelle</label>
 		<input id="actuel" name="actuel"  maxlength="255" value="<?php echo $plxPlugin->getParam("actuel"); ?>">
 	</p>
 
