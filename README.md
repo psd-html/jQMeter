@@ -16,7 +16,7 @@ Pour afficher le plugin
 
 <?php eval($plxShow->callHook('jQMeter')) ?> 
 
-Démo et tutoriel sur http://nextum.fr  avec le template Color
+Démo du plugin sur http://nextum.fr  avec le template Color 
 
 
 
