@@ -68,7 +68,7 @@ class jQMeter extends plxPlugin {
                 animationSpeed: 2000,
 
                 // whether to display the percentage completed or raised.
-                displayTotal: true
+                displayTotal: <?php echo $this->getParam('affichage');?>
 
                 });
         </script>

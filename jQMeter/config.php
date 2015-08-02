@@ -11,14 +11,13 @@ if(!empty($_POST)) {
 	$plxPlugin->setParam('info', $_POST['info'], 'cdata');
 	$plxPlugin->setParam('bgColor', $_POST['bgColor'], 'cdata');
 	$plxPlugin->setParam('barColor', $_POST['barColor'], 'cdata');
+	$plxPlugin->setParam('affichage', $_POST['affichage'], 'cdata');
 	$plxPlugin->saveParams();
 	header('Location: parametres_plugin.php?p=jQMeter');
 	exit;
 }
 
 ?>
-
-<h2><?php echo $plxPlugin->getInfo("description") ?></h2>
 
 <p>
 	Pour afficher la barre de progression :
@@ -27,8 +26,8 @@ if(!empty($_POST)) {
 <code>&lt;?php eval($plxShow->callHook('jQMeter')); ?&gt;</code>
 
 <style>
-	input, textarea {border-radius: 5px;width: 60%}
-	textarea {min-height: 70px}
+	input, textarea {border-radius: 5px;width: 40%}
+	textarea {min-height: 50px}
 	label{font-style: italic}
 </style>
 
@@ -68,6 +67,14 @@ if(!empty($_POST)) {
 		<label for="info">Information sous la barre de progression</label>
 		<textarea id="info" rows="5"   name="info"><? echo $plxPlugin->getParam('info'); ?></textarea>
 
+	</p>
+
+	<p>
+		<label for="affichage">Afficher le pourcentage dans la barre ?</label>
+		<select name="affichage" id="affichage">
+           <option value="true" selected>Oui</option>
+           <option value="false">Non</option>
+       </select>
 	</p>
 
 	<p class="in-action-bar">
