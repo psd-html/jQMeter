@@ -35,37 +35,37 @@ if(!empty($_POST)) {
 
 	<p>
 		<label for="objectif">Objectif à atteindre</label>
-		<input id="objectif" name="objectif"  maxlength="255" value="<?= $plxPlugin->getParam("objectif"); ?>">
+		<input id="objectif" name="objectif"  maxlength="255" value="<?php echo $plxPlugin->getParam("objectif"); ?>">
 	</p>	
 
 	<p>
 		<label for="actuel">Valeur actuelle</label>
-		<input id="actuel" name="actuel"  maxlength="255" value="<?= $plxPlugin->getParam("actuel"); ?>">
+		<input id="actuel" name="actuel"  maxlength="255" value="<?php echo $plxPlugin->getParam("actuel"); ?>">
 	</p>
 
 	<p>
 		<label for="largeur">Largeur de la barre de progression (ex: 100px ou 60%)</label>
-		<input id="largeur" name="largeur"  maxlength="255" value="<?= $plxPlugin->getParam("largeur"); ?>">
+		<input id="largeur" name="largeur"  maxlength="255" value="<?php echo $plxPlugin->getParam("largeur"); ?>">
 	</p>
 
 	<p>
 		<label for="hauteur">Hauteur de la barre de progression (ex: 50px)</label>
-		<input id="hauteur" name="hauteur"  maxlength="255" value="<?= $plxPlugin->getParam("hauteur"); ?>">
+		<input id="hauteur" name="hauteur"  maxlength="255" value="<?php echo $plxPlugin->getParam("hauteur"); ?>">
 	</p>
 
 	<p>
 		<label for="bgColor">Couleur du background (ex:#444444)</label>
-		<input id="bgColor" name="bgColor"  maxlength="255" value="<?= $plxPlugin->getParam("bgColor"); ?>">
+		<input id="bgColor" name="bgColor"  maxlength="255" value="<?php echo $plxPlugin->getParam("bgColor"); ?>">
 	</p>
 
 	<p>
 		<label for="barColor">Couleur de la barre (ex:#bfd255)</label>
-		<input id="barColor" name="barColor"  maxlength="255" value="<?= $plxPlugin->getParam("barColor"); ?>">
+		<input id="barColor" name="barColor"  maxlength="255" value="<?php echo $plxPlugin->getParam("barColor"); ?>">
 	</p>
 
 	<p>
 		<label for="info">Information sous la barre de progression</label>
-		<textarea id="info" rows="5"   name="info"><?= $plxPlugin->getParam('info'); ?></textarea>
+		<textarea id="info" rows="5"   name="info"><?php echo $plxPlugin->getParam('info'); ?></textarea>
 
 	</p>
 
@@ -78,7 +78,7 @@ if(!empty($_POST)) {
 	</p>
 
 	<p class="in-action-bar">
-		<?= plxToken::getTokenPostMethod() ?>
+		<?php echo plxToken::getTokenPostMethod() ?>
 		<input type="submit" name="submit" value="Valider" />
 		
 	</p>
