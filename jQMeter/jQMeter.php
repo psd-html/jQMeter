@@ -20,8 +20,8 @@ class jQMeter extends plxPlugin {
     
     public function jQMeter() {?>
       <div id="graph"></div>
-      <p><?= $this->getParam('info');?></p>
-      <p><?= $this->getParam('valeur');?></p>
+      <p><?php echo $this->getParam('info');?></p>
+      <p><?php echo $this->getParam('valeur');?></p>
       <?php 
     }
 
@@ -40,23 +40,23 @@ class jQMeter extends plxPlugin {
         <script>
             $('#graph').jQMeter({
 
-                goal:"<?= $this->getParam('objectif');?>",
-                raised:"<?= $this->getParam('actuel');?>",
+                goal:"<?php echo $this->getParam('objectif');?>",
+                raised:"<?php echo $this->getParam('actuel');?>",
 
 
                 // the width of the progress meter
-                width: "<?= $this->getParam('largeur');?>",
+                width: "<?php echo $this->getParam('largeur');?>",
 
                 // the height of the progress meter
-                height: "<?= $this->getParam('hauteur');?>",
+                height: "<?php echo $this->getParam('hauteur');?>",
 
                 // the background color
                 // Supports hex, rgba, or word values
-                bgColor: "<?= $this->getParam('bgColor');?>",
+                bgColor: "<?php echo $this->getParam('bgColor');?>",
 
                 // the text color
                 // supports hex, rgba, or word values.
-                barColor: "<?= $this->getParam('barColor');?>",
+                barColor: "<?php echo $this->getParam('barColor');?>",
 
                 // horizontal or vertical
                 orientation: "horizontal",
@@ -68,7 +68,7 @@ class jQMeter extends plxPlugin {
                 animationSpeed: 2000,
 
                 // whether to display the percentage completed or raised.
-                displayTotal: <?= $this->getParam('affichage');?>
+                displayTotal: <?php echo $this->getParam('affichage');?>
 
                 });
         </script>
