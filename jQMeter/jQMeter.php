@@ -25,13 +25,11 @@ class jQMeter extends plxPlugin {
       <?php 
     }
 
-    public function ThemeEndBody(){ ?>
+    public function ThemeEndBody(){ 
 
-        <script type="text/javascript">
-        /* <![CDATA[ */
-           if(typeof(jQuery) === "undefined") document.write(\'<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>\');
-        /* !]]> */
-        </script>
+    $script = $this->getParam('script');
+
+     if ($script == 'true') { echo'<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>';}?>
 
 
 
