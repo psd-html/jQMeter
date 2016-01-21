@@ -12,6 +12,7 @@ if(!empty($_POST)) {
 	$plxPlugin->setParam('bgColor', $_POST['bgColor'], 'cdata');
 	$plxPlugin->setParam('barColor', $_POST['barColor'], 'cdata');
 	$plxPlugin->setParam('affichage', $_POST['affichage'], 'cdata');
+	$plxPlugin->setParam('script', $_POST['script'], 'cdata');
 	$plxPlugin->saveParams();
 	header('Location: parametres_plugin.php?p=jQMeter');
 	exit;
@@ -30,6 +31,11 @@ if(!empty($_POST)) {
 	textarea {min-height: 50px}
 	label{font-style: italic}
 </style>
+
+<?php 
+	$script = $plxPlugin->getParam('script'); 
+	$affichage = $plxPlugin->getParam('affichage'); 
+?>
 
 <form action="parametres_plugin.php?p=jQMeter" method="post">
 
@@ -72,9 +78,17 @@ if(!empty($_POST)) {
 	<p>
 		<label for="affichage">Afficher le pourcentage dans la barre ?</label>
 		<select name="affichage" id="affichage">
-           <option value="true" selected>Oui</option>
-           <option value="false">Non</option>
+           <option value="true" <?php if ($affichage == 'true') { echo'selected';}?>>Oui</option>
+           <option value="false" <?php if ($affichage == 'false') { echo'selected';}?>>Non</option>
        </select>
+	</p>
+
+	<p>
+		<label for="script">Activer jQuery 2.1.3 ?</label>
+		<select name="script" id="script">
+		   <option value="true" <?php if ($script == 'true') { echo'selected';}?>>Oui</option>
+		   <option value="false" <?php if ($script == 'false') { echo'selected';}?>>Non</option>
+		</select>
 	</p>
 
 	<p class="in-action-bar">
